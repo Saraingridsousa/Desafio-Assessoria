@@ -6,8 +6,8 @@ import { Image } from "../Image"
 export function Navbar(){
     return(
         <HStack
-            bg={"rosaclaro"}
-            py={0.02}
+            bg={"lightpink"}
+            py={0.5}
             justify={"center"}
             spacing={10}
             position={"sticky"}
