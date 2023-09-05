@@ -7,7 +7,7 @@ export function Footer(){
         <HStack
         bg={"lightpink"}
         py={1}
-        spacing={20}
+        spacing={300}
         bottom={0}
         
         >
