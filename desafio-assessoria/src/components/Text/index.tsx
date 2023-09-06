@@ -3,7 +3,7 @@ import { Text } from "@chakra-ui/react"
 interface GeneralTextProps{
     text: string
     color: string
-    fontSize: any
+    fontSize: string
     textAlign?: any
 }
 
