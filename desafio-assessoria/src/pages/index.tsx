@@ -14,13 +14,19 @@ export default function Home() {
     </Stack>
 
     <HStack
-    py={600}
+    py={700}
     bg={"darkpink"}
+    paddingTop={"18px"}
+    paddingBottom={"600px"}
+    display={"flex"}
+    justifyContent={"center"} 
     >
-      <Stack>
-        <GeneralTitle text={"Nossos Produtos"} color={"darkpink"} fontSize={"28px"} textAlign={"center"} bColor={"lightpink"} />
-      </Stack>
       
+        <GeneralTitle text={"Nossos Produtos"} color={"darkpink"} fontSize={"28px"} textAlign={"center"} bColor={"lightpink"} />
+      
+
+
+
     </HStack>
     
     </>

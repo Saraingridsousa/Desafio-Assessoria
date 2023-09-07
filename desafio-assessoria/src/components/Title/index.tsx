@@ -17,7 +17,7 @@ export function GeneralTitle({text,bColor, color, fontSize, textAlign}:GeneralTi
         borderRadius={"12px"}
         display={"inline-block"}
         px={"14px"} 
-        py={"10px"}
+        py={"6px"}
         boxShadow={" 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"}
 
         >
