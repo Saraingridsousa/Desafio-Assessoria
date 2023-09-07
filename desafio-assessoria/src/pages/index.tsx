@@ -1,14 +1,28 @@
 import { SectionIndex, TextHome } from "@/components/Sections";
-import { Stack } from "@chakra-ui/react";
+import { GeneralTitle } from "@/components/Title";
+import { HStack, Stack } from "@chakra-ui/react";
 
 export default function Home() {
   return (
-    <><Stack spacing={4}>
+    <>
+    <Stack spacing={4}>
       <SectionIndex />
     </Stack>
     
     <Stack>
         <TextHome />
-      </Stack></>
+    </Stack>
+
+    <HStack
+    py={600}
+    bg={"darkpink"}
+    >
+      <Stack>
+        <GeneralTitle text={"Nossos Produtos"} color={"darkpink"} fontSize={"28px"} textAlign={"center"} bColor={"lightpink"} />
+      </Stack>
+      
+    </HStack>
+    
+    </>
   );
 }
