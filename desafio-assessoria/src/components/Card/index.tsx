@@ -74,7 +74,7 @@ export function GridHome3(){
         py={25}
         bg={"white"}
         spacing={5}
-        boxShadow={"8px 6px 10px 0px #00000061"}
+        boxShadow={" 5px 5px 10px 0px rgba(0, 0, 0, 0.25)"}
         borderRadius={" 16px"}
         
         paddingLeft={"20px"}

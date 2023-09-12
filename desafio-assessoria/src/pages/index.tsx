@@ -3,8 +3,7 @@ import { SectionIndex, TextHome } from "@/components/Sections";
 import { GeneralTitle } from "@/components/Title";
 import { Grid, GridItem, HStack, Stack } from "@chakra-ui/react";
 import { GridHome, GridHome2, GridHome3 } from "@/components/Card";
-import { Images } from "@/components/Image";
-import { GeneralText } from "@/components/Text";
+
 
 export default function Home() {
   return (
@@ -32,9 +31,9 @@ export default function Home() {
         </Stack>
 
         <Stack
-        marginTop={20}
+        marginTop={14}
         >
-        <Grid templateColumns='repeat(1, 1fr)' gap={3}>
+        <Grid templateColumns='repeat(1, 1fr)' gap={8}>
 
           <GridItem>
             <GridHome/>
