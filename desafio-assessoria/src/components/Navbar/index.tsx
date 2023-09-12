@@ -16,10 +16,10 @@ export function Navbar(){
         >
             <LinkNavbar href={"/"} text={"Home"}/>
             <LinkNavbar href={"/contato"} text={"Contato"}/>
-            <LinkNavbar href={""} text={"Membros"}/>
+            <LinkNavbar href={"/membros"} text={"Membros"}/>
             <LinkIcon href={"/"} src={"/Logo.png"} alt={"Logo"} width={115} height={80}/>
-            <LinkNavbar href={""} text={"Gerenciamento"}/>
-            <LinkNavbar href={""} text={"Login"}/>
+            <LinkNavbar href={"/gerenciamento"} text={"Gerenciamento"}/>
+            <LinkNavbar href={"/login"} text={"Login"}/>
               
         </HStack>
 

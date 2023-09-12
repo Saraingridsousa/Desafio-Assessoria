@@ -6,7 +6,7 @@ export default function Contato(){
     return(
         <>
              <HStack
-             paddingTop={"80px"}
+             paddingTop={"60px"}
              paddingBottom={"80px"}
              display={"flex"}
              justifyContent={"center"}>
