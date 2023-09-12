@@ -20,7 +20,7 @@ export default function Home() {
     py={20}
     bg={"darkpink"}
     paddingTop={"18px"}
-    
+    px={"2%"}
     display={"flex"}
     justifyContent={"center"} 
     flexDirection={"column"}
