@@ -1,7 +1,7 @@
 import { Stack } from "@chakra-ui/react";
 import NextImage from 'next/image'
 
-interface ImageProps{
+interface ImagesProps{
     w?: string
     align?: string
     src: string
@@ -10,7 +10,7 @@ interface ImageProps{
     height:number
 }
 
-export function Image({w,src,alt,width,height, align}:ImageProps){
+export function Images({w,src,alt,width,height, align}:ImagesProps){
     return(
         <Stack
             as="picture"

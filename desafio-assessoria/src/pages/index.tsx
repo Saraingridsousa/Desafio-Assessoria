@@ -1,6 +1,10 @@
+
 import { SectionIndex, TextHome } from "@/components/Sections";
 import { GeneralTitle } from "@/components/Title";
-import { HStack, Stack } from "@chakra-ui/react";
+import { Grid, GridItem, HStack, Stack } from "@chakra-ui/react";
+import { GridHome, GridHome2, GridHome3 } from "@/components/Card";
+import { Images } from "@/components/Image";
+import { GeneralText } from "@/components/Text";
 
 export default function Home() {
   return (
@@ -14,19 +18,39 @@ export default function Home() {
     </Stack>
 
     <HStack
-    py={700}
+    py={20}
     bg={"darkpink"}
     paddingTop={"18px"}
-    paddingBottom={"600px"}
+    
     display={"flex"}
     justifyContent={"center"} 
+    flexDirection={"column"}
     >
-      
-        <GeneralTitle text={"Nossos Produtos"} color={"darkpink"} fontSize={"28px"} textAlign={"center"} bColor={"lightpink"} />
-      
+        <Stack
+        marginTop={18}>
+        <GeneralTitle text={"Principais Produtos"} color={"darkpink"} fontSize={"28px"} textAlign={"center"} bColor={"lightpink"} />
+        </Stack>
 
+        <Stack
+        marginTop={20}
+        >
+        <Grid templateColumns='repeat(1, 1fr)' gap={3}>
 
+          <GridItem>
+            <GridHome/>
+          </GridItem>
 
+          <GridItem>
+            <GridHome2/>
+          </GridItem>
+
+          <GridItem>
+            <GridHome3/>
+          </GridItem>
+
+        </Grid>
+          
+        </Stack>
     </HStack>
     
     </>

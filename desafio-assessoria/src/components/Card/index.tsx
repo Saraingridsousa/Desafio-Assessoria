@@ -1,12 +1,99 @@
-import { Grid, GridItem } from '@chakra-ui/react'
+import { Stack } from "@chakra-ui/react"
+import { Images } from "../Image"
+import { GeneralText } from "../Text"
 
 export function GridHome(){
     return (
-        <Grid templateColumns='repeat(1, 1fr)' gap={3}>
-        <GridItem w='100%' h='10' bg='blue.500' />
-        <GridItem w='100%' h='10' bg='blue.500' />
-        <GridItem w='100%' h='10' bg='blue.500' />
-</Grid>
+        <>
+        <Stack
+        px={80}
+        py={25}
+        bg={"white"}
+        spacing={5}
+        boxShadow={"8px 6px 10px 0px #00000061"}
+        borderRadius={" 16px"}
+        
+        paddingLeft={"20px"}
+        flexDirection={"revert"}
+       
+        >  
+          <Images
+            src={"/Vestido1.png"}
+            alt={"Primeiro produto destaque da Home"}
+            width={179}
+            height={182}/>
+            <Stack bgPosition={"colunm"} spacing={4}>
+            <GeneralText text={"Vestido Melissa"} color={"darkpink"} fontSize={"24px"}
+            />
+
+            <GeneralText text={" gvhtrgmtrhgtrmjgfjcxojvreilhsdfumherusiofhieeruphfgumrhoejd"} color={"darkpink"} fontSize={"16px"}/>
+            </Stack>
+        </Stack>
+</>
+    )
+
+}
+
+export function GridHome2(){
+    return (
+        <>
+        <Stack
+        px={80}
+        py={25}
+        bg={"white"}
+        spacing={5}
+        boxShadow={"8px 6px 10px 0px #00000061"}
+        borderRadius={" 16px"}
+        
+        paddingLeft={"20px"}
+        flexDirection={"revert"}
+       
+        >  
+          <Images
+            src={"/Vestido2.png"}
+            alt={"Segundo produto destaque da Home"}
+            width={179}
+            height={182}/>
+            <Stack bgPosition={"colunm"} spacing={4}>
+            <GeneralText text={"Vestido Melissa"} color={"darkpink"} fontSize={"24px"}
+            />
+
+            <GeneralText text={" gvhtrgmtrhgtrmjgfjcxojvreilhsdfumherusiofhieeruphfgumrhoejd"} color={"darkpink"} fontSize={"16px"}/>
+            </Stack>
+        </Stack>
+</>
+    )
+
+}
+
+export function GridHome3(){
+    return (
+        <>
+        <Stack
+        px={80}
+        py={25}
+        bg={"white"}
+        spacing={5}
+        boxShadow={"8px 6px 10px 0px #00000061"}
+        borderRadius={" 16px"}
+        
+        paddingLeft={"20px"}
+        flexDirection={"revert"}
+       
+        >  
+          <Images
+            src={"/Vestido3.png"}
+            alt={"Segundo produto destaque da Home"}
+            width={179}
+            height={182}/>
+            <Stack bgPosition={"colunm"} spacing={4}>
+            <GeneralText text={"Vestido Melissa"} color={"darkpink"} fontSize={"24px"}
+            />
+
+            <GeneralText text={" gvhtrgmtrhgtrmjgfjcxojvreilhsdfumherusiofhieeruphfgumrhoejd"} color={"darkpink"} fontSize={"16px"}/>
+            </Stack>
+        </Stack>
+</>
     )
 
 }

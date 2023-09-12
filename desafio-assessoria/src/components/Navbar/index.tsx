@@ -1,6 +1,6 @@
 import { HStack } from "@chakra-ui/react";
 import { LinkNavbar } from "../Link";
-import { Image } from "../Image"
+import { Images } from "../Image"
 
 
 export function Navbar(){
@@ -17,7 +17,7 @@ export function Navbar(){
             <LinkNavbar href={""} text={"Home"}/>
             <LinkNavbar href={""} text={"Contato"}/>
             <LinkNavbar href={""} text={"Membros"}/>
-            <Image src={"/Logo.png"} alt={"Logo"} width={115} height={80}/>
+            <Images src={"/Logo.png"} alt={"Logo"} width={115} height={80}/>
             <LinkNavbar href={""} text={"Gerenciamento"}/>
             <LinkNavbar href={""} text={"Login"}/>
               

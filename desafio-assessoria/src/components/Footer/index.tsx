@@ -1,5 +1,5 @@
 import { HStack, Stack } from "@chakra-ui/react";
-import { Image } from "../Image"
+import { Images } from "../Image"
 import { GeneralText } from "../Text";
 
 export function Footer(){
@@ -16,7 +16,7 @@ export function Footer(){
                 left={0}
                 position={"absolute"}
                 >
-                <Image src={"/Logo.png"} alt={"Logo"} width={120} height={85}/>
+                <Images src={"/Logo.png"} alt={"Logo"} width={120} height={85}/>
                 </Stack>
                 
                 <Stack
@@ -32,7 +32,7 @@ export function Footer(){
                 <Stack
                 position={"absolute"}
                 right={2}>
-                    <Image src={"/SocialFooter.png"} alt={"Redes Sociais"} width={170} height={50}/>
+                    <Images src={"/SocialFooter.png"} alt={"Redes Sociais"} width={170} height={50}/>
                 </Stack>
             </HStack>
         </Stack>
