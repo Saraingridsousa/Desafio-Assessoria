@@ -1,0 +1,34 @@
+{
+    "membrosj": [
+      {
+        "id": 1,
+        "name": "Sara Ingrid Sousa O.",
+        "email": "sara.sousa@codejr.com.br",
+        "birthday": "25/05",
+        "position": "Desenvolvedora"
+      },
+      {
+        "id": 2,
+        "name": "Julyane Coutinho B.",
+        "email": " julyanecb@gmail.com",
+        "birthday": "07/01",
+        "position": "Fotógrafa"
+      },
+      {
+        "id": 3,
+        "name": "Amanda Bia Sousa",
+        "email": " mandyso@gmail.com",
+        "birthday": "22/09",
+        "position": "Vendedora"
+      },
+      {
+        "id": 4,
+        "name": "Daniele Guimarães",
+        "email": " daniiguim@gmail.com",
+        "birthday": "31/10",
+        "position": "vendedora"
+      }
+      
+    ]
+  }
+  
