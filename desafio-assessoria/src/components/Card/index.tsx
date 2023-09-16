@@ -2,6 +2,7 @@ import { Box, HStack, Stack } from "@chakra-ui/react"
 import { Images } from "../Image"
 import { GeneralText } from "../Text"
 import { InputIndex } from "../Form"
+import { ButtonLogin } from "../Button"
 
 export function GridHome(){
     return (
@@ -80,7 +81,6 @@ export function GridHome3(){
         spacing={10}
         boxShadow={" 5px 5px 10px 0px rgba(0, 0, 0, 0.25)"}
         borderRadius={" 16px"}
-        
         paddingLeft={"40px"}
         flexDirection={"revert"}
        
@@ -104,28 +104,23 @@ export function GridHome3(){
 
 }
 
-export function CardLogin(){    
-    return(
-        <Stack
+export function CardLogin() {
+    return (
+      <Stack
         w={"60%"}
+      >
+        <Stack
+          spacing={6}
+          align={"center"}
+          px={9}
+          py={10}
         >
-           
-            <Stack
-                spacing={16}
-                align={"center"}
-                px={9}
-                py={10}
-            >
-                <HStack
-                    w={"100%"}
-                    justify={"space-between"}
-                >
-                    
-                    <InputIndex label={"Email"} color={"white"} type={"email"} w={"30%"} placeholder={"Digite aqui seu email"} />
-                    
-                    <InputIndex label={"Senha"} type={"password"} w={"30%"} placeholder={"Digite aqui sua senha"} /> 
-                </HStack>
-            </Stack>
+           <GeneralText text={"LOGIN"} color={"darkpink"} fontSize={"48px"}/>
+
+          <InputIndex label={" Email:"} type={"email"} w={"70%"} placeholder={"Digite aqui seu email"} />
+          <InputIndex label={" Senha:"} type={"password"} w={"70%"} placeholder={"Digite aqui sua senha"} />
         </Stack>
+        <ButtonLogin textButton={"Entrar"} href={"/"}/>
+      </Stack>
     )
- }
+  }

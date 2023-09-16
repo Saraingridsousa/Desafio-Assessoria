@@ -4,15 +4,16 @@ import type { AppProps } from 'next/app'
 import { Navbar } from '@/components/Navbar'
 import { theme } from '@/styles/theme'
 import { Footer } from '@/components/Footer'
+import  Login  from '@/pages/login'
 
 export default function App({ Component, pageProps }: AppProps) {
-  return(
+  const isLoginPage = Component === Login;
 
+  return (
     <ChakraProvider theme={theme}>
-      <Navbar/>
+      {!isLoginPage && <Navbar />}
       <Component {...pageProps} />
-      <Footer/>
+      {!isLoginPage && <Footer />}
     </ChakraProvider>
-    
-  ) 
+  )
 }
