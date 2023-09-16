@@ -1,6 +1,7 @@
-import { Stack } from "@chakra-ui/react"
+import { Box, HStack, Stack } from "@chakra-ui/react"
 import { Images } from "../Image"
 import { GeneralText } from "../Text"
+import { InputIndex } from "../Form"
 
 export function GridHome(){
     return (
@@ -102,3 +103,29 @@ export function GridHome3(){
     )
 
 }
+
+export function CardLogin(){    
+    return(
+        <Stack
+        w={"60%"}
+        >
+           
+            <Stack
+                spacing={16}
+                align={"center"}
+                px={9}
+                py={10}
+            >
+                <HStack
+                    w={"100%"}
+                    justify={"space-between"}
+                >
+                    
+                    <InputIndex label={"Email"} color={"white"} type={"email"} w={"30%"} placeholder={"Digite aqui seu email"} />
+                    
+                    <InputIndex label={"Senha"} type={"password"} w={"30%"} placeholder={"Digite aqui sua senha"} /> 
+                </HStack>
+            </Stack>
+        </Stack>
+    )
+ }

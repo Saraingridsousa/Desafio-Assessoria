@@ -12,7 +12,7 @@ interface MembrosProps {
   position: string
 }
 
-export default function Membros({id, name, email, birthday, position}:MembrosProps) {
+export default function Membros() {
   const [members, setMembers] = useState<MembrosProps[]>([]);
 
   useEffect(() => {
