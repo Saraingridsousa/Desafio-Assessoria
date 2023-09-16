@@ -4,8 +4,16 @@ import { HStack, Stack, Box, Table, Thead, Tbody, Tr, Th, Td } from "@chakra-ui/
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-export default function Membros() {
-  const [members, setMembers] = useState([]);
+interface MembrosProps {
+  id: number
+  name: string
+  email: string
+  birthday: string
+  position: string
+}
+
+export default function Membros({id, name, email, birthday, position}:MembrosProps) {
+  const [members, setMembers] = useState<MembrosProps[]>([]);
 
   useEffect(() => {
     axios
