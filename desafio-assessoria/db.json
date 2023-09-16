@@ -26,9 +26,15 @@
         "name": "Daniele Guimarães",
         "email": " daniiguim@gmail.com",
         "birthday": "31/10",
-        "position": "vendedora"
+        "position": "Vendedora"
+      },
+      {
+        "id": 5,
+        "name": "Roberta Tayná",
+        "email": " robertatsa@gmail.com",
+        "birthday": "21/06",
+        "position": "Estilista"
       }
-      
     ]
   }
   

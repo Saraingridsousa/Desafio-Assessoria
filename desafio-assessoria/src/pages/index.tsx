@@ -33,7 +33,7 @@ export default function Home() {
         <Stack
         marginTop={14}
         >
-        <Grid templateColumns='repeat(1, 1fr)' gap={8}>
+        <Grid templateColumns='repeat(1, 1fr)' gap={9}>
 
           <GridItem>
             <GridHome/>
