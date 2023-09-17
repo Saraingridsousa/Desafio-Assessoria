@@ -25,8 +25,10 @@ import {
 import axios from "axios";
 import { GeneralTitle } from "@/components/Title";
 import { GeneralText } from "@/components/Text";
+import { MdModeEditOutline } from 'react-icons/md';
+import { AiFillEye, AiFillDelete } from 'react-icons/ai';
 
-// Definindo o tipo para editMember
+
 type EditMember = {
   id: number | null;
   name: string;
@@ -49,7 +51,6 @@ export default function Gerenciamento() {
     position: "",
   });
 
-  // Estado para editMember com o tipo definido
   const [editMember, setEditMember] = useState<EditMember>({
     id: null,
     name: "",
@@ -57,6 +58,9 @@ export default function Gerenciamento() {
     birthday: "",
     position: "",
   });
+
+  const [deleteConfirmationModal, setDeleteConfirmationModal] = useState(false);
+  const [memberToDelete, setMemberToDelete] = useState(null);
 
   useEffect(() => {
     axios
@@ -69,7 +73,6 @@ export default function Gerenciamento() {
       });
   }, []);
 
-  // Função para configurar editMember com os dados do membro a ser editado
   const setEditingMemberData = (member) => {
     setEditMember({
       id: member.id,
@@ -123,19 +126,26 @@ export default function Gerenciamento() {
     setIsViewing(true);
   };
 
-  const handleDelete = () => {
-    axios
-      .delete(`http://localhost:3001/membrosj/${selectedMember.id}`)
-      .then(() => {
-        const updatedMembers = members.filter(
-          (member) => member.id !== selectedMember.id
-        );
-        setMembers(updatedMembers);
-        setIsDeleting(false);
-      })
-      .catch((error) => {
-        console.error("Erro ao excluir membro:", error);
-      });
+  const handleDelete = (member) => {
+    setMemberToDelete(member);
+    setDeleteConfirmationModal(true);
+  };
+
+  const confirmDelete = () => {
+    if (memberToDelete) {
+      axios
+        .delete(`http://localhost:3001/membrosj/${memberToDelete.id}`)
+        .then(() => {
+          const updatedMembers = members.filter(
+            (member) => member.id !== memberToDelete.id
+          );
+          setMembers(updatedMembers);
+          setDeleteConfirmationModal(false);
+        })
+        .catch((error) => {
+          console.error("Erro ao excluir membro:", error);
+        });
+    }
   };
 
   return (
@@ -158,7 +168,7 @@ export default function Gerenciamento() {
       </HStack>
 
       <Stack marginBottom={34} marginLeft={12} marginRight={12}>
-        <Box borderRadius="16px" boxShadow="0px 7px 4px 0px rgba(0, 0, 0, 0.20)">
+        <Box borderRadius={"16px"} boxShadow="0px 7px 4px 0px rgba(0, 0, 0, 0.20)">
           <Table variant="simple">
             <Thead style={{ background: "lightpink" }}>
               <Tr>
@@ -205,6 +215,7 @@ export default function Gerenciamento() {
                     color={"white"}
                     fontSize={"20px"}
                     fontWeight={"normal"}
+                    _hover={{bg:"#AA4946", }}
                   >
                     Criar Membro
                   </Button>
@@ -218,24 +229,25 @@ export default function Gerenciamento() {
                   <Td w={"20%"} textAlign={"center"}>{member.email}</Td>
                   <Td w={"20%"} textAlign={"center"}>{member.birthday}</Td>
                   <Td w={"20%"} textAlign={"center"}>{member.position}</Td>
-                  <Td w={"20%"} textAlign={"center"}>
-                    <Button onClick={() => {
-                      setEditingMemberData(member); // Configurar editMember com os dados do membro
-                      setIsEditing(true);
-                    }}>Editar</Button>
-                    <Button
-                      onClick={() => handleView(member)}
-                    >
-                      Visualizar
-                    </Button>
-                    <Button
-                      onClick={() => handleDelete(member)}
-                    >
-                      Excluir
-                    </Button>
+                  <Td w={"20%"} textAlign={"center"} alignItems={"center"}>
+                    <HStack pacing={4} justifyContent="center">
+
+                      <Button bg={"darkpink"}  w={"24%"} _hover={{bg:"#AA4946", }}
+                      onClick={() => {
+                        setEditingMemberData(member);
+                        setIsEditing(true);
+                      }}> <MdModeEditOutline color={"lightpink"}/> </Button>
+
+                      <Button  bg={"darkpink"} w={"24%"} _hover={{bg:"#AA4946", }}
+                      onClick={() => handleView(member)}> <AiFillEye color={"lightpink"}/></Button>
+
+                      <Button  bg={"darkpink"}  w={"24%"} _hover={{bg:"#AA4946", }}
+                      onClick={() => handleDelete(member)}> <AiFillDelete color={"lightpink"}/> </Button>
+                    </HStack>
                   </Td>
                 </Tr>
               ))}
+
             </Tbody>
           </Table>
         </Box>
@@ -380,6 +392,30 @@ export default function Gerenciamento() {
           </ModalBody>
         </ModalContent>
       </Modal>
+
+      {/* Modal de confirmação de exclusão */}
+      <Modal
+        isOpen={deleteConfirmationModal}
+        onClose={() => setDeleteConfirmationModal(false)}
+      >
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Confirmar Exclusão</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            Tem certeza de que deseja excluir este membro?
+          </ModalBody>
+          <ModalFooter>
+            <Button colorScheme="red" onClick={confirmDelete}>
+              Confirmar
+            </Button>
+            <Button onClick={() => setDeleteConfirmationModal(false)}>
+              Cancelar
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </>
   );
 }
+
