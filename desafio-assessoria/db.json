@@ -1,11 +1,32 @@
 {
   "membrosj": [
     {
-      "id": 1,
+      "name": "Sara Ingrid Sousa",
+      "email": "sara.sousa@codejr.com.br",
+      "birthday": "25/05",
+      "position": "Desenvolvedora",
+      "id": 1
+    },
+    {
+      "id": 3,
       "name": "Vitin Careca",
-      "email": "vitin.careca@code.jr",
+      "email": "joaovitor.fernandes@codejr.com.br",
       "birthday": "16/09",
-      "position": "O brabo do Next"
+      "position": "Ser o Brabo do Next "
+    },
+    {
+      "name": "Daniboy",
+      "email": "daniel.alves@codejr.com.br",
+      "birthday": "03/07",
+      "position": "Ser +1 brabo do Next",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "Felipe Sant'anna",
+      "email": "felipe.santanna@codejr.com.br",
+      "birthday": "31/03",
+      "position": "Ser o terceiro mosqueteiro do trio de brabos do Next"
     }
   ]
 }

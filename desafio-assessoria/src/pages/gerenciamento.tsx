@@ -232,16 +232,16 @@ export default function Gerenciamento() {
                   <Td w={"20%"} textAlign={"center"} alignItems={"center"}>
                     <HStack pacing={4} justifyContent="center">
 
-                      <Button bg={"darkpink"}  w={"24%"} _hover={{bg:"#AA4946", }}
+                      <Button bg={"darkpink"} fontSize={20} w={"24%"} _hover={{bg:"#AA4946", }}
                       onClick={() => {
                         setEditingMemberData(member);
                         setIsEditing(true);
                       }}> <MdModeEditOutline color={"lightpink"}/> </Button>
 
-                      <Button  bg={"darkpink"} w={"24%"} _hover={{bg:"#AA4946", }}
+                      <Button  bg={"darkpink"} fontSize={20} w={"24%"} _hover={{bg:"#AA4946", }}
                       onClick={() => handleView(member)}> <AiFillEye color={"lightpink"}/></Button>
 
-                      <Button  bg={"darkpink"}  w={"24%"} _hover={{bg:"#AA4946", }}
+                      <Button  bg={"darkpink"} fontSize={20} w={"24%"} _hover={{bg:"#AA4946", }}
                       onClick={() => handleDelete(member)}> <AiFillDelete color={"lightpink"}/> </Button>
                     </HStack>
                   </Td>
@@ -301,10 +301,12 @@ export default function Gerenciamento() {
             </FormControl>
           </ModalBody>
           <ModalFooter>
-            <Button colorScheme="blue" onClick={handleCreate}>
+            <HStack position={4}>
+            <Button w={"50%"} colorScheme={"darkpink"} bg={"darkpink"} _hover={{bg:"#AA4946", }} onClick={handleCreate} >
               Salvar
             </Button>
-            <Button onClick={() => setIsCreating(false)}>Cancelar</Button>
+            <Button w={"50%"} colorScheme={"darkpink"} bg={"darkpink"} _hover={{bg:"#AA4946", }} onClick={() => setIsCreating(false)} >Cancelar</Button>
+            </HStack>
           </ModalFooter>
         </ModalContent>
       </Modal>
@@ -359,10 +361,12 @@ export default function Gerenciamento() {
             </FormControl>
           </ModalBody>
           <ModalFooter>
-            <Button colorScheme="blue" onClick={handleEdit}>
+            <HStack position={4}>
+            <Button w={"50%"} colorScheme={"darkpink"} bg={"darkpink"} _hover={{bg:"lightpink", }} onClick={handleEdit}>
               Salvar
             </Button>
-            <Button onClick={() => setIsEditing(false)}>Cancelar</Button>
+            <Button w={"50%"} colorScheme={"darkpink"} bg={"darkpink"} _hover={{bg:"lightpink", }} onClick={() => setIsEditing(false)}>Cancelar</Button>
+            </HStack>
           </ModalFooter>
         </ModalContent>
       </Modal>
@@ -406,12 +410,14 @@ export default function Gerenciamento() {
             Tem certeza de que deseja excluir este membro?
           </ModalBody>
           <ModalFooter>
-            <Button colorScheme="red" onClick={confirmDelete}>
+            <HStack position={4}>
+            <Button w={"50%"} colorScheme={"darkpink"} bg={"darkpink"} _hover={{bg:"lightpink", }} onClick={confirmDelete}>
               Confirmar
             </Button>
-            <Button onClick={() => setDeleteConfirmationModal(false)}>
+            <Button w={"50%"} colorScheme={"darkpink"} bg={"darkpink"} _hover={{bg:"lightpink", }} onClick={() => setDeleteConfirmationModal(false)}>
               Cancelar
             </Button>
+            </HStack>
           </ModalFooter>
         </ModalContent>
       </Modal>
