@@ -105,24 +105,28 @@ export function GridHome3(){
 }
 
 export function CardLogin() {
-    return (
-      <Stack
-        w={"60%"}
-      >
-        <Stack
-          spacing={6}
-          align={"center"}
-          px={9}
-          py={10}
-        >
-           <GeneralText text={"LOGIN"} color={"darkpink"} fontSize={"48px"}/>
-          <Stack marginLeft={0} w={"100%"} >
-          <InputIndex label={" Email:"} type={"email"} w={"70%"} placeholder={"Digite aqui seu email"} />
-          <InputIndex label={" Senha:"} type={"password"} w={"70%"} placeholder={"Digite aqui sua senha"} />
-          <ButtonLogin textButton={"Entrar"} href={"/"}/>
-          </Stack>
+  return (
+    <Stack w={"60%"} align="center" justify="center">
+      <Stack spacing={6} align="center" px={9} py={10} width={"100%"}>
+        <GeneralText text={"LOGIN"} color={"darkpink"} fontSize={"48px"} />
+        <Stack marginLeft={0} w={"100%"} align="center">
+          <InputIndex
+            label={" Email:"}
+            type={"email"}
+            w={"70%"}
+            placeholder={"Digite aqui seu email"}
+          />
+          <InputIndex
+            label={" Senha:"}
+            type={"password"}
+            w={"70%"}
+            placeholder={"Digite aqui sua senha"}
+          />
+        </Stack>
+        <Stack width="70%" direction="row" justifyContent="flex-start">
+          <ButtonLogin textButton={"Entrar"} href={"/gerenciamento"} />
+        </Stack>
       </Stack>
-
-     </Stack> 
-    )
-  }
+    </Stack>
+  );
+}
