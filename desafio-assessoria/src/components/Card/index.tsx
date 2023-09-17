@@ -116,11 +116,13 @@ export function CardLogin() {
           py={10}
         >
            <GeneralText text={"LOGIN"} color={"darkpink"} fontSize={"48px"}/>
-
+          <Stack marginLeft={0} w={"100%"} >
           <InputIndex label={" Email:"} type={"email"} w={"70%"} placeholder={"Digite aqui seu email"} />
           <InputIndex label={" Senha:"} type={"password"} w={"70%"} placeholder={"Digite aqui sua senha"} />
-        </Stack>
-        <ButtonLogin textButton={"Entrar"} href={"/"}/>
+          <ButtonLogin textButton={"Entrar"} href={"/"}/>
+          </Stack>
       </Stack>
+
+     </Stack> 
     )
   }
