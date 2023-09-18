@@ -22,9 +22,9 @@ export default function Contato(){
             alignItems={"center"} 
             marginBottom={"80px"}
             >
-                <LinkIcon href={""} src={"/ContatoWpp.png"} alt={"Icone de contato do wpp"} width={94} height={77}/>
-                <LinkIcon href={""} src={"/ContatoInsta.png"} alt={"Icone de contato do instagram"} width={94} height={77}/>
-                <LinkIcon href={""} src={"/ContatoEmail.png"} alt={"Icone de contato do instagram"} width={94} height={77}/>
+                <LinkIcon href={"https://web.whatsapp.com/"} src={"/ContatoWpp.png"} alt={"Icone de contato do wpp"} width={94} height={77}/>
+                <LinkIcon href={"https://www.instagram.com/"} src={"/ContatoInsta.png"} alt={"Icone de contato do instagram"} width={94} height={77}/>
+                <LinkIcon href={"https://www.google.com/intl/pt-BR/gmail/about/"} src={"/ContatoEmail.png"} alt={"Icone de contato do instagram"} width={94} height={77}/>
             </HStack>
         </>
     )
