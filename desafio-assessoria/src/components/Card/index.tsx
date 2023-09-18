@@ -2,7 +2,7 @@ import { Box, HStack, Stack } from "@chakra-ui/react"
 import { Images } from "../Image"
 import { GeneralText } from "../Text"
 import { InputIndex } from "../Form"
-import { ButtonLogin } from "../Button"
+import {  GeneralButton } from "../Button"
 
 export function GridHome(){
     return (
@@ -124,7 +124,7 @@ export function CardLogin() {
           />
         </Stack>
         <Stack width="70%" direction="row" justifyContent="flex-start">
-          <ButtonLogin textButton={"Entrar"} href={"/gerenciamento"} />
+          <GeneralButton textButton={"Entrar"} href={"/gerenciamento"} />
         </Stack>
       </Stack>
     </Stack>

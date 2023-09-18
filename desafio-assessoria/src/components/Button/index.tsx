@@ -1,12 +1,12 @@
 import { Button } from "@chakra-ui/react"
 import NextLink from 'next/link'
 
-interface ButtonLoginProps{
+interface GeneralButtonProps{
     textButton: string
     href: string
 }
 
-export function ButtonLogin({ textButton, href }: ButtonLoginProps) {
+export function GeneralButton({ textButton, href }: GeneralButtonProps) {
     return (
       <Button
         as={NextLink}

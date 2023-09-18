@@ -1,5 +1,7 @@
-import { Stack } from "@chakra-ui/react";
+import {  Stack } from "@chakra-ui/react";
 import { GeneralText } from "../Text";
+import { InputIndex } from "../Form";
+import {GeneralButton } from "../Button";
 
 export function SectionIndex(){
     return(
@@ -25,3 +27,18 @@ export function TextHome(){
       </Stack>
     )
 }
+
+export function SectionForms(){
+    return(
+        <Stack
+            as="section"
+            spacing={6}
+        >
+            <InputIndex label={"Nome:"} type={"name"} placeholder={""} w={"100%"}/>
+            <InputIndex label={"Email:"} type={"email"} placeholder={""} w={"100%"}/>
+            <InputIndex label={"Mensagem:"} type={"text"} placeholder={""} w={"100%"} h={"70px"}/>
+            <GeneralButton textButton={"Enviar"} href={"/contato"}/>
+        </Stack>
+    )
+}
+

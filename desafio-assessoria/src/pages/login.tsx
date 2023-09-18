@@ -1,4 +1,3 @@
-import { ButtonLogin } from "@/components/Button";
 import { CardLogin } from "@/components/Card";
 import { Images } from "@/components/Image";
 
@@ -15,7 +14,7 @@ export default function Login() {
         spacing={-30}
         alignItems={"flex-start"}
         >
-        <Images src={"/ImageLogin.png"} alt={"Imagem da página de login"} width={251} height={544}  />
+        <Images src={"/ImageLogin.png"} alt={"Imagem da página de login"} width={231} height={524}  />
         <CardLogin />
       </Stack>
     )
