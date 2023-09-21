@@ -33,8 +33,8 @@ type EditMember = {
   id: number | null;
   name: string;
   email: string;
-  birthday: string;
-  position: string;
+  aniversario: string;
+  cargo: string;
 };
 
 export default function Gerenciamento() {
@@ -47,16 +47,16 @@ export default function Gerenciamento() {
   const [newMember, setNewMember] = useState({
     name: "",
     email: "",
-    birthday: "",
-    position: "",
+    aniversario: "",
+    cargo: "",
   });
 
   const [editMember, setEditMember] = useState<EditMember>({
     id: null,
     name: "",
     email: "",
-    birthday: "",
-    position: "",
+    aniversario: "",
+    cargo: "",
   });
 
   const [deleteConfirmationModal, setDeleteConfirmationModal] = useState(false);
@@ -78,8 +78,8 @@ export default function Gerenciamento() {
       id: member.id,
       name: member.name,
       email: member.email,
-      birthday: member.birthday,
-      position: member.position,
+      aniversario: member.aniversario,
+      cargo: member.cargo,
     });
   };
 
@@ -92,8 +92,8 @@ export default function Gerenciamento() {
         setNewMember({
           name: "",
           email: "",
-          birthday: "",
-          position: "",
+          aniversario: "",
+          cargo: "",
         });
       })
       .catch((error) => {
@@ -227,8 +227,8 @@ export default function Gerenciamento() {
                 <Tr key={member.id}>
                   <Td w={"20%"} textAlign={"center"}>{member.name}</Td>
                   <Td w={"20%"} textAlign={"center"}>{member.email}</Td>
-                  <Td w={"20%"} textAlign={"center"}>{member.birthday}</Td>
-                  <Td w={"20%"} textAlign={"center"}>{member.position}</Td>
+                  <Td w={"20%"} textAlign={"center"}>{member.aniversario}</Td>
+                  <Td w={"20%"} textAlign={"center"}>{member.cargo}</Td>
                   <Td w={"20%"} textAlign={"center"} alignItems={"center"}>
                     <HStack pacing={4} justifyContent="center">
 
@@ -283,9 +283,9 @@ export default function Gerenciamento() {
               <FormLabel>Aniversário</FormLabel>
               <Input
                 type="text"
-                value={newMember.birthday}
+                value={newMember.aniversario}
                 onChange={(e) =>
-                  setNewMember({ ...newMember, birthday: e.target.value })
+                  setNewMember({ ...newMember, aniversario: e.target.value })
                 }
               />
             </FormControl>
@@ -293,9 +293,9 @@ export default function Gerenciamento() {
               <FormLabel>Cargo</FormLabel>
               <Input
                 type="text"
-                value={newMember.position}
+                value={newMember.cargo}
                 onChange={(e) =>
-                  setNewMember({ ...newMember, position: e.target.value })
+                  setNewMember({ ...newMember, cargo: e.target.value })
                 }
               />
             </FormControl>
@@ -343,9 +343,9 @@ export default function Gerenciamento() {
               <FormLabel>Aniversário</FormLabel>
               <Input
                 type="text"
-                value={editMember.birthday}
+                value={editMember.aniversario}
                 onChange={(e) =>
-                  setEditMember({ ...editMember, birthday: e.target.value })
+                  setEditMember({ ...editMember, aniversario: e.target.value })
                 }
               />
             </FormControl>
@@ -353,9 +353,9 @@ export default function Gerenciamento() {
               <FormLabel>Cargo</FormLabel>
               <Input
                 type="text"
-                value={editMember.position}
+                value={editMember.cargo}
                 onChange={(e) =>
-                  setEditMember({ ...editMember, position: e.target.value })
+                  setEditMember({ ...editMember, cargo: e.target.value })
                 }
               />
             </FormControl>
@@ -387,11 +387,11 @@ export default function Gerenciamento() {
             </FormControl>
             <FormControl>
               <FormLabel>Aniversário</FormLabel>
-              <Input type="text" value={selectedMember.birthday} isReadOnly />
+              <Input type="text" value={selectedMember.aniversario} isReadOnly />
             </FormControl>
             <FormControl>
               <FormLabel>Cargo</FormLabel>
-              <Input type="text" value={selectedMember.position} isReadOnly />
+              <Input type="text" value={selectedMember.cargo} isReadOnly />
             </FormControl>
           </ModalBody>
         </ModalContent>

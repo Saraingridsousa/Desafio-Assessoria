@@ -8,8 +8,8 @@ interface MembrosProps {
   id: number
   name: string
   email: string
-  birthday: string
-  position: string
+  aniversario: string
+  cargo: string
 }
 
 export default function Membros() {
@@ -58,8 +58,8 @@ export default function Membros() {
                 <Tr key={member.id}>
                   <Td w={"25%"} textAlign={"center"}>{member.name}</Td>
                   <Td w={"25%"} textAlign={"center"}>{member.email}</Td>
-                  <Td w={"25%"} textAlign={"center"}>{member.birthday}</Td>
-                  <Td w={"25%"} textAlign={"center"}>{member.position}</Td>
+                  <Td w={"25%"} textAlign={"center"}>{member.aniversario}</Td>
+                  <Td w={"25%"} textAlign={"center"}>{member.cargo}</Td>
                 </Tr>
               ))}
             </Tbody>
